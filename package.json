@@ -11,7 +11,7 @@
     "homepage": "./",
     "build": {
         "appId": "com.my-website.my-app",
-        "productName": "QuikTrip Upload Tool",
+        "productName": "File Hasher",
         "copyright": "Copyright © 2019 Bastian Solutions",
         "files": [
             "build/**/*",
