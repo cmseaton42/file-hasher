@@ -83,8 +83,7 @@ export const InputDecorator = styled(Container)`
 `;
 
 export const File = styled.input.attrs({
-    type: "file",
-    accept: ".xlsx"
+    type: "file"
 })`
     display: none;
 `;
@@ -114,8 +113,7 @@ export const FileUploader = styled.label`
 
     &:hover {
         cursor: ${props => (props.disabled ? "default" : "pointer")};
-        background: ${props =>
-            props.disabled ? styles.colors.LIGHT_GREY : styles.colors.SECONDARY_TINT};
+        background: ${props => (props.disabled ? styles.colors.LIGHT_GREY : styles.colors.SECONDARY_TINT)};
 
         transition: all 200ms ease-in-out;
     }
