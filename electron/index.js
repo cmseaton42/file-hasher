@@ -14,8 +14,8 @@ function createMainWindow() {
     mainWindow = new BrowserWindow({
         minWidth: 300,
         width: 300,
-        minHeight: 180,
-        height: 180,
+        minHeight: 225,
+        height: 225,
         resizable: isDev ? true : false,
         icon: __dirname + "/images/icon.png",
         webPreferences: {
@@ -27,7 +27,9 @@ function createMainWindow() {
     mainWindow.setMenuBarVisibility(false);
 
     // Load window URL
-    mainWindow.loadURL(isDev ? "http://localhost:3000" : `file://${path.join(__dirname, "../build/index.html")}`);
+    mainWindow.loadURL(
+        isDev ? "http://localhost:3000" : `file://${path.join(__dirname, "../build/index.html")}`
+    );
 
     // Install dev tools if in dev mode
     if (isDev) {

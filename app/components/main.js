@@ -37,7 +37,8 @@ const HashButton = styled.button`
 
     &:hover {
         cursor: ${props => (props.disabled ? "default" : "pointer")};
-        background: ${props => (props.disabled ? styles.colors.LIGHT_GREY : styles.colors.SECONDARY_TINT)};
+        background: ${props =>
+            props.disabled ? styles.colors.LIGHT_GREY : styles.colors.SECONDARY_TINT};
 
         transition: all 200ms ease-in-out;
     }
@@ -59,6 +60,8 @@ const Main = () => {
             copyStringToClipboard(hashStr);
 
             alert(`Hash has been copied to clipboard!\n${hashStr}`);
+
+            setPath(null);
         });
 
         // read all file and pipe it (write it) to the hash object
@@ -98,7 +101,7 @@ const Main = () => {
 
 function copyStringToClipboard(str) {
     // Create new element
-    var el = document.createElement("textarea");
+    let el = document.createElement("textarea");
     // Set value (string to be copied)
     el.value = str;
     // Set non-editable to avoid focus and move outside of view
